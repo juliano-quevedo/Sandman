@@ -617,6 +617,34 @@
   line-height: 1.7;
 }
 
+.store-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.store-button {
+  display: block;
+  width: 172px;
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  transition: transform var(--ease);
+}
+
+.store-button:hover {
+  transform: translateY(-2px);
+}
+
+.store-button img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .cta__panel > * {
   position: relative; /* mantém o conteúdo acima dos círculos decorativos */
 }

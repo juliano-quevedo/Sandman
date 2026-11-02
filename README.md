@@ -48,7 +48,7 @@ carregados por CSS remoto.
 
 ## Antes de publicar
 
-- [ ] Links oficiais das lojas (CTA hoje abre um toast de aviso)
+- [ ] Links oficiais da App Store e do Google Play (botões hoje abrem um toast de aviso)
 - [ ] E-mail oficial de privacidade (hoje provisório) e dados do responsável (razão social/CNPJ)
 - [ ] Remover a nota final e os avisos "provisório" da política
 - [ ] Revisão jurídica da política (LGPD)
