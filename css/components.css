@@ -1,0 +1,227 @@
+/* ==========================================================================
+   Componentes compartilhados: logo, header, botões, kicker, footer, toast.
+   ========================================================================== */
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font: 700 29px var(--font-heading);
+  letter-spacing: -1.8px;
+}
+
+.logo__mark {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 10px;
+  background: var(--color-accent);
+  color: #171513;
+  font-size: 20px;
+  transform: rotate(-8deg);
+}
+
+.logo__dot {
+  color: var(--color-accent);
+}
+
+.logo--sm {
+  font-size: 23px;
+  color: #fff;
+}
+
+/* Header */
+.site-header {
+  position: relative;
+  z-index: 5;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.site-header__bar {
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  color: #d2d8d0;
+  font-size: 14px;
+}
+
+.nav-links a:hover,
+.back-link:hover {
+  color: var(--color-accent);
+}
+
+.back-link {
+  color: #d4d5d0;
+  font-size: 14px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 20px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 14px;
+  transition:
+    background var(--ease),
+    transform var(--ease);
+}
+
+.btn--primary {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.btn--primary:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-2px);
+}
+
+.btn--secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-line);
+  color: #fff;
+}
+
+.btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.btn--dark {
+  background: var(--color-challenge-ink);
+  color: #fff;
+}
+
+.btn--dark:hover {
+  transform: translateY(-2px);
+}
+
+/* Kicker (sobretítulo) */
+.kicker {
+  margin-bottom: 15px;
+  color: var(--color-accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Footer */
+.site-footer {
+  padding: 28px 0 35px;
+  border-top: 1px solid var(--color-line);
+  color: #8d988b;
+  font-size: 12px;
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.site-footer__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.site-footer a:not(.logo):hover {
+  color: var(--color-accent);
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  z-index: 10;
+  max-width: calc(100% - 32px);
+  padding: 14px 20px;
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  color: var(--color-challenge-ink);
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.33);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 20px);
+  transition: 0.25s;
+}
+
+.toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 850px) {
+  .nav-links {
+    gap: 18px;
+  }
+}
+
+/* Mobile: o menu só é ocultado quando o JS está ativo (.js em <html>) */
+@media (max-width: 600px) {
+  .back-link {
+    font-size: 12px;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .js .menu-toggle {
+    display: block;
+  }
+
+  .js .nav-links {
+    display: none;
+    position: absolute;
+    top: calc(var(--header-h) - 1px);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    padding: 22px 24px 26px;
+    background: var(--color-panel-policy);
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .js .nav-links.is-open {
+    display: flex;
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-footer__links {
+    align-items: flex-start;
+  }
+}

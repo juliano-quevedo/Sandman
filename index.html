@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="pt-BR" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171513" />
+    <script>
+      document.documentElement.classList.replace('no-js', 'js');
+    </script>
+
+    <title>Rodow — Cada viagem vale mais</title>
+    <!-- SUGESTÃO: description e Open Graph não existiam no HTML original -->
+    <meta
+      name="description"
+      content="Registre viagens de carro ou moto, complete desafios, ganhe pontos e suba no ranking da comunidade Rodow."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Rodow" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Rodow — Cada viagem vale mais" />
+    <meta
+      property="og:description"
+      content="Registre viagens de carro ou moto, complete desafios, ganhe pontos e suba no ranking da comunidade Rodow."
+    />
+    <!-- Personalizar: URL final do site e imagem 1200x630 -->
+    <!-- <link rel="canonical" href="https://SEU-DOMINIO.com.br/" /> -->
+    <!-- <meta property="og:image" content="https://SEU-DOMINIO.com.br/assets/og-image.png" /> -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/landing.css" />
+  </head>
+
+  <body class="page-landing">
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container site-header__bar">
+        <a class="logo" href="#inicio" aria-label="Rodow — início">
+          <span class="logo__mark" aria-hidden="true">↗</span>rodow<span class="logo__dot">.</span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+        >
+          ☰
+        </button>
+        <nav class="nav-links" id="menu-principal" data-nav aria-label="Principal">
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#desafios">Desafios</a>
+          <a href="#ranking">Ranking</a>
+          <a href="#duvidas">Dúvidas</a>
+        </nav>
+        <a class="btn btn--primary nav-cta" href="#comecar" data-toast-trigger>
+          Quero fazer parte <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <!-- 2 · Hero -->
+      <section class="hero" id="inicio">
+        <div class="container hero__grid">
+          <div>
+            <div class="eyebrow">
+              <span class="eyebrow__dot" aria-hidden="true"></span> Sua próxima conquista começa na
+              estrada
+            </div>
+            <h1 class="hero__title">Não é só chegar.<br />É <em>conquistar</em><br />o caminho.</h1>
+            <p class="hero__copy">
+              Registre suas viagens de carro ou moto, encare desafios, acumule pontos e mostre à
+              comunidade até onde você pode chegar.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#comecar"
+                >Quero rodar com o Rodow <span aria-hidden="true">↗</span></a
+              >
+              <a class="btn btn--secondary" href="#como-funciona"
+                >Descubra como funciona <span aria-hidden="true">↓</span></a
+              >
+            </div>
+            <p class="hero__micro">Sua jornada. Seus desafios. Seu lugar no ranking.</p>
+          </div>
+
+          <div class="hero-art">
+            <img
+              class="hero-art__img"
+              src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1300&q=85"
+              alt="Fotografia de aventura sobre duas rodas"
+              width="1300"
+              height="867"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="hero-art__shade" aria-hidden="true"></div>
+            <div class="hero-art__tag">● MODO AVENTURA ATIVADO</div>
+            <svg
+              class="hero-art__route"
+              viewBox="0 0 360 300"
+              fill="none"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M30 265 C80 235 52 185 120 176 S190 222 207 155 S170 90 240 82 S275 48 325 25"
+                stroke="#F47721"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-dasharray="2 11"
+              />
+              <circle cx="30" cy="265" r="8" fill="#F47721" stroke="#17200F" stroke-width="4" />
+              <circle cx="325" cy="25" r="8" fill="#F47721" stroke="#17200F" stroke-width="4" />
+              <circle cx="207" cy="155" r="15" fill="#F47721" fill-opacity=".2" />
+              <circle cx="207" cy="155" r="5" fill="#F47721" />
+            </svg>
+            <div class="hero-art__badge"><b>+250 pts</b><span>DESAFIO CONCLUÍDO ✦</span></div>
+            <div class="route-card">
+              <div><small>ÚLTIMA VIAGEM</small><strong>Serra &amp; liberdade</strong></div>
+              <div class="route-card__metric">
+                <strong>186 km</strong><span>DE ESTRADA PELA FRENTE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 · Ticker -->
+      <div class="ticker">
+        <div class="container ticker__inner">
+          <div class="ticker__label">A estrada é o começo</div>
+          <div class="ticker__item"><span aria-hidden="true">↗</span> Registre cada viagem</div>
+          <div class="ticker__item"><span aria-hidden="true">✳</span> Complete desafios</div>
+          <div class="ticker__item"><span aria-hidden="true">◆</span> Ganhe pontos</div>
+          <div class="ticker__item"><span aria-hidden="true">♛</span> Suba no ranking</div>
+        </div>
+      </div>
+
+      <!-- 4 · Como funciona -->
+      <section class="section" id="como-funciona">
+        <div class="container">
+          <div class="section-head">
+            <div class="kicker">Mais que um trajeto</div>
+            <h2>Transforme cada quilômetro em uma conquista.</h2>
+            <p>
+              O Rodow coloca uma nova dose de propósito em cada saída. Você roda do seu jeito,
+              acompanha sua evolução e encontra novos motivos para pegar a estrada.
+            </p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">⌁</div>
+              <h3>Registre suas viagens</h3>
+              <p>
+                Registre seus trajetos de carro ou moto e transforme cada passeio, deslocamento ou
+                aventura em parte da sua jornada.
+              </p>
+            </article>
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">✳</div>
+              <h3>Vá além do caminho</h3>
+              <p>
+                Descubra desafios variados, defina seu próximo objetivo e encontre novas razões para
+                explorar.
+              </p>
+            </article>
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">♛</div>
+              <h3>Conquiste seu lugar</h3>
+              <p>
+                Acumule pontos ao concluir desafios, acompanhe sua posição e dispute espaço no
+                ranking da comunidade.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 · Desafios -->
+      <section class="challenge" id="desafios">
+        <div class="container challenge__grid">
+          <div>
+            <div class="kicker">Desafio aceito?</div>
+            <h2>Seu próximo nível está a algumas curvas de distância.</h2>
+            <p>
+              De metas de distância a novas formas de explorar, cada desafio é uma oportunidade de
+              somar pontos e avançar. A próxima conquista pode começar na sua próxima viagem.
+            </p>
+            <a href="#comecar" class="btn btn--dark"
+              >Quero encarar desafios <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="challenge__cards">
+            <article class="challenge-card">
+              <div class="challenge-card__mini">Desafio de distância</div>
+              <h3>Mais longe, mais alto</h3>
+              <div class="challenge-card__points">+300 <small>PTS</small></div>
+            </article>
+            <article class="challenge-card">
+              <div class="challenge-card__mini">Consistência</div>
+              <h3>Ritmo de estrada</h3>
+              <div class="challenge-card__points">+150 <small>PTS</small></div>
+            </article>
+            <article class="challenge-card">
+              <div class="challenge-card__mini">Exploração</div>
+              <h3>Novos horizontes</h3>
+              <div class="challenge-card__points">+200 <small>PTS</small></div>
+            </article>
+            <article class="challenge-card">
+              <div class="challenge-card__mini">Sua evolução</div>
+              <h3>Próxima conquista</h3>
+              <div class="challenge-card__points">??? <small>PTS</small></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 · Ranking -->
+      <section class="section rank-section" id="ranking">
+        <div class="container rank__grid">
+          <div class="rank__copy">
+            <div class="kicker">A comunidade Rodow</div>
+            <h2>Compartilhe a estrada. Dispute o topo.</h2>
+            <p>
+              Cada desafio concluído é uma chance de evoluir. Acompanhe seus pontos, compare seu
+              progresso e veja sua posição no ranking da comunidade.
+            </p>
+            <p class="rank__note">
+              Os perfis e pontuações ao lado são exemplos ilustrativos do conceito de ranking.
+            </p>
+            <a href="#comecar" class="btn btn--primary"
+              >Quero entrar no ranking <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="leaderboard">
+            <div class="leaderboard__head">
+              <strong>Ranking da comunidade</strong><span>● TEMPORADA ATIVA</span>
+            </div>
+            <div class="rank-row">
+              <div class="rank-row__num">01</div>
+              <div class="rider">
+                <div class="rider__avatar" aria-hidden="true">🏍️</div>
+                <div><b>RotaLivre</b><small>12 desafios concluídos</small></div>
+              </div>
+              <div class="rank-row__score">2.840<small>pontos</small></div>
+            </div>
+            <div class="rank-row">
+              <div class="rank-row__num">02</div>
+              <div class="rider">
+                <div class="rider__avatar" aria-hidden="true">🛣️</div>
+                <div><b>CurvaCerta</b><small>10 desafios concluídos</small></div>
+              </div>
+              <div class="rank-row__score">2.560<small>pontos</small></div>
+            </div>
+            <div class="rank-row">
+              <div class="rank-row__num">03</div>
+              <div class="rider">
+                <div class="rider__avatar" aria-hidden="true">🚗</div>
+                <div><b>KmExtra</b><small>9 desafios concluídos</small></div>
+              </div>
+              <div class="rank-row__score">2.210<small>pontos</small></div>
+            </div>
+            <div class="rank-row">
+              <div class="rank-row__num">04</div>
+              <div class="rider">
+                <div class="rider__avatar" aria-hidden="true">🌄</div>
+                <div><b>VentoNorte</b><small>8 desafios concluídos</small></div>
+              </div>
+              <div class="rank-row__score">1.980<small>pontos</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7 · Três passos -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div class="kicker">É simples começar</div>
+            <h2>Três passos. Uma estrada inteira pela frente.</h2>
+            <p>O próximo capítulo da sua jornada começa com uma escolha: sair para rodar.</p>
+          </div>
+          <div class="steps">
+            <article class="step">
+              <div class="step__num">01 / REGISTRE</div>
+              <h3>Faça sua viagem</h3>
+              <p>Abra o Rodow e registre seus trajetos de carro ou moto.</p>
+            </article>
+            <article class="step">
+              <div class="step__num">02 / CONQUISTE</div>
+              <h3>Complete desafios</h3>
+              <p>Escolha seus objetivos, conclua desafios e acumule pontos pelo caminho.</p>
+            </article>
+            <article class="step">
+              <div class="step__num">03 / EVOLUA</div>
+              <h3>Suba no ranking</h3>
+              <p>Acompanhe sua pontuação e compare sua evolução com a comunidade.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8 · FAQ -->
+      <section class="section section--faq" id="duvidas">
+        <div class="container">
+          <div class="section-head">
+            <div class="kicker">Perguntas frequentes</div>
+            <h2>Antes de pegar a estrada.</h2>
+          </div>
+          <div class="faq" data-accordion>
+            <details>
+              <summary>O Rodow é para carro e moto?</summary>
+              <div class="faq__content" data-accordion-content>
+                <p>
+                  Sim. A proposta do Rodow é permitir que pessoas registrem viagens feitas de carro
+                  ou moto e participem de desafios da comunidade.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>Como ganho pontos?</summary>
+              <div class="faq__content" data-accordion-content>
+                <p>
+                  A ideia é conquistar pontos ao concluir os desafios disponíveis no aplicativo. As
+                  regras e pontuações específicas devem ser apresentadas dentro de cada desafio.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>Como funciona o ranking?</summary>
+              <div class="faq__content" data-accordion-content>
+                <p>
+                  O ranking destaca participantes de acordo com a pontuação acumulada, incentivando
+                  a evolução e a participação na comunidade.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>O aplicativo já está disponível?</summary>
+              <div class="faq__content" data-accordion-content>
+                <p>
+                  Esta página é um protótipo de divulgação. Substitua este conteúdo pelos links
+                  oficiais das lojas e pelas informações de disponibilidade do Rodow quando
+                  estiverem definidos.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9 · CTA final -->
+      <section class="cta" id="comecar">
+        <div class="container">
+          <div class="cta__panel">
+            <div class="kicker">A estrada está chamando</div>
+            <h2>Não deixe sua próxima viagem ser só mais uma.</h2>
+            <p>Registre. Desafie-se. Conquiste seu lugar no Rodow.</p>
+            <button class="btn btn--primary" type="button" data-toast-trigger>
+              Quero conhecer o Rodow <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 10 · Footer + toast -->
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <a class="logo logo--sm" href="#inicio" aria-label="Rodow — início">
+          <span class="logo__mark" aria-hidden="true">↗</span>rodow<span class="logo__dot">.</span>
+        </a>
+        <span>Feito para quem encontra liberdade no caminho.</span>
+        <div class="site-footer__links">
+          <span>© 2026 Rodow · Protótipo conceitual</span>
+          <!-- SUGESTÃO: link não existia no HTML original da landing -->
+          <a href="politica-de-privacidade.html">Política de privacidade</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" data-toast role="status" aria-live="polite">
+      Adicione aqui o link oficial para baixar o Rodow.
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

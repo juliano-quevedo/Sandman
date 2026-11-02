@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Design tokens — única fonte de verdade de cores, tipografia e medidas.
+   Breakpoints (media queries não aceitam var()):
+     landing  → 850px (tablet) e 600px (mobile)
+     política → 800px e 480px
+   ========================================================================== */
+:root {
+  /* Cores */
+  --color-bg: #171513;
+  --color-panel: #181e19;
+  --color-panel-policy: #211b17;
+  --color-panel-2: #29221d;
+  --color-text: #f5f7f2;
+  --color-muted: #a8b1a7;
+  --color-muted-policy: #b1b4ad;
+  --color-accent: #f47721;
+  --color-accent-hover: #ff9857;
+  --color-on-accent: #151a12;
+  --color-line: rgba(255, 255, 255, 0.12);
+  --color-hero-fallback: #30251e;
+
+  /* Seção "Desafios" (fundo claro) */
+  --color-challenge-bg: #ffe4d2;
+  --color-challenge-card: #fff8f3;
+  --color-challenge-border: #f2b58f;
+  --color-challenge-ink: #17200f;
+  --color-challenge-kicker: #a94a12;
+  --color-challenge-body: #6b4936;
+  --color-challenge-mini: #9a6547;
+  --color-challenge-points: #b94f12;
+
+  /* Tipografia */
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  /* Raios */
+  --radius-sm: 12px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-card: 22px;
+  --radius-panel: 28px;
+  --radius-pill: 999px;
+
+  /* Layout */
+  --max-landing: 1180px;
+  --max-policy: 1120px;
+  --gutter: 24px;
+  --header-h: 82px;
+
+  /* Movimento */
+  --ease: 0.2s ease;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --gutter: 16px;
+    --header-h: 70px;
+  }
+}
