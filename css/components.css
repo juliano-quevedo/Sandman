@@ -19,7 +19,7 @@
 
 .logo--sm {
   font-size: 23px;
-  color: #fff;
+  color: var(--color-neutral-white);
 }
 
 .logo--sm .logo__image {
@@ -44,17 +44,17 @@
 .nav-links {
   display: flex;
   gap: 30px;
-  color: #d2d8d0;
+  color: var(--color-neutral-500);
   font-size: 14px;
 }
 
 .nav-links a:hover,
 .back-link:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
 }
 
 .back-link {
-  color: #d4d5d0;
+  color: var(--color-neutral-500);
   font-size: 14px;
 }
 
@@ -62,9 +62,18 @@
   display: none;
   background: none;
   border: 0;
-  color: #fff;
+  color: var(--color-neutral-600);
   font-size: 26px;
   line-height: 1;
+}
+
+.btn > .fa-solid {
+  display: inline-grid;
+  flex: 0 0 18px;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
 }
 
 /* Botões */
@@ -73,9 +82,11 @@
   align-items: center;
   justify-content: center;
   gap: 9px;
-  padding: 13px 20px;
+  height: 37px;
+  padding: 0 20px;
   border: 0;
-  border-radius: var(--radius-pill);
+  border-radius: 8px;
+  color: var(--color-neutral-white);
   font-weight: 700;
   font-size: 14px;
   transition:
@@ -85,27 +96,26 @@
 
 .btn--primary {
   background: var(--color-accent);
-  color: var(--color-on-accent);
 }
 
 .btn--primary:hover {
   background: var(--color-accent-hover);
+  color: var(--color-neutral-white);
   transform: translateY(-2px);
 }
 
 .btn--secondary {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--color-neutral-100);
   border: 1px solid var(--color-line);
-  color: #fff;
+  color: var(--color-neutral-400);
 }
 
 .btn--secondary:hover {
-  background: rgba(255, 255, 255, 0.14);
+  background: var(--color-neutral-200);
 }
 
 .btn--dark {
   background: var(--color-challenge-ink);
-  color: #fff;
 }
 
 .btn--dark:hover {
@@ -115,7 +125,7 @@
 /* Kicker (sobretítulo) */
 .kicker {
   margin-bottom: 15px;
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -126,7 +136,7 @@
 .site-footer {
   padding: 28px 0 35px;
   border-top: 1px solid var(--color-line);
-  color: #8d988b;
+  color: var(--color-neutral-400);
   font-size: 12px;
 }
 
@@ -146,7 +156,7 @@
 }
 
 .site-footer a:not(.logo):hover {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
 }
 
 /* Toast */

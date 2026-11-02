@@ -19,9 +19,10 @@ Sandman/
 │  ├─ main.js          # entrada da landing
 │  ├─ policy.js        # entrada da política
 │  └─ modules/         # menu, toast, accordion, toc
-├─ assets/favicon.svg
+├─ scripts/dev-server.js
+├─ assets/            # favicon e imagens locais
 ├─ .vscode/            # configurações e extensões recomendadas
-└─ .editorconfig, .prettierrc, package.json, vercel.json
+└─ .editorconfig, package.json, vercel.json
 ```
 
 ## Rodar no VS Code
@@ -34,13 +35,11 @@ dependências adicionais.
 
 > Abra por servidor local: os scripts usam ES Modules, que o navegador bloqueia em `file://`.
 
-## Qualidade de código
+## Código e dependências
 
-```bash
-npm install
-npm run format        # formata tudo com Prettier
-npm run format:check
-```
+O site é feito em HTML, CSS e JavaScript nativos e não possui dependências npm. O servidor de
+desenvolvimento usa apenas módulos nativos do Node.js. Os ícones Font Awesome e as fontes são
+carregados por CSS remoto.
 
 ## Deploy
 
@@ -53,7 +52,7 @@ npm run format:check
 - [ ] E-mail oficial de privacidade (hoje provisório) e dados do responsável (razão social/CNPJ)
 - [ ] Remover a nota final e os avisos "provisório" da política
 - [ ] Revisão jurídica da política (LGPD)
-- [ ] Adicionar a imagem final do hero e criar `og-image.png` (1200×630)
+- [ ] Confirmar imagem final do hero e criar `og-image.png` (1200×630)
 - [ ] Descomentar `canonical` e `og:image` com o domínio real
 - [ ] Serviços de terceiros reais citados na política
 
@@ -61,3 +60,5 @@ npm run format:check
 
 Link "Política de privacidade" no rodapé da landing, `description`/Open Graph da landing, skip link,
 destaque da seção ativa no índice da política e animação do FAQ.
+Ícones clássicos Font Awesome Free 7.3.1 carregados pelo cdnjs com integridade SRI
+(licença dos ícones: [CC BY 4.0](https://fontawesome.com/license/free)).

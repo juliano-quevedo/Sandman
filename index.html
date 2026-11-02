@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#171513" />
+    <meta name="theme-color" content="#f1f3f9" />
     <script>
       document.documentElement.classList.replace('no-js', 'js');
     </script>
@@ -33,6 +33,21 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/fontawesome.min.css"
+      integrity="sha512-SMQ1DwSGiIDyNoXdQae7kUBADdtQa8Xsb3LxBxzAXExZNCCH/36yQSpZSYo1c6ckFshd1iMp9eD9+s9+tdhmyg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/solid.min.css"
+      integrity="sha512-E5l6RuM1LLr8r+BTSEtKE9mqwPrO+HQNKbBacr303FoExXNvjq2dX7/0A3sV6OwusCkVmMRZ5zcSDwCziA+n8Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/tokens.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components.css" />
@@ -55,7 +70,7 @@
           aria-expanded="false"
           aria-controls="menu-principal"
         >
-          ☰
+          <i class="fa-solid fa-bars" data-menu-icon aria-hidden="true"></i>
         </button>
         <nav class="nav-links" id="menu-principal" data-nav aria-label="Principal">
           <a href="#como-funciona">Como funciona</a>
@@ -64,7 +79,8 @@
           <a href="#duvidas">Dúvidas</a>
         </nav>
         <a class="btn btn--primary nav-cta" href="#comecar" data-toast-trigger>
-          Quero fazer parte <span aria-hidden="true">↗</span>
+          Quero fazer parte
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
         </a>
       </div>
     </header>
@@ -85,19 +101,30 @@
             </p>
             <div class="hero__actions">
               <a class="btn btn--primary" href="#comecar"
-                >Quero rodar com o Rodow <span aria-hidden="true">↗</span></a
-              >
+                >Quero rodar com o Rodow
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i
+              ></a>
               <a class="btn btn--secondary" href="#como-funciona"
-                >Descubra como funciona <span aria-hidden="true">↓</span></a
-              >
+                >Descubra como funciona <i class="fa-solid fa-arrow-down" aria-hidden="true"></i
+              ></a>
             </div>
             <p class="hero__micro">Sua jornada. Seus desafios. Seu lugar no ranking.</p>
           </div>
 
           <div class="hero-art">
-            <div class="hero-art__placeholder" aria-hidden="true">Imagem de destaque</div>
+            <img
+              class="hero-art__img"
+              src="assets/hero-motorcycle.jpg"
+              alt="Motocicleta de aventura estacionada em uma estrada cercada por árvores"
+              width="768"
+              height="1152"
+              fetchpriority="high"
+              decoding="async"
+            />
             <div class="hero-art__shade" aria-hidden="true"></div>
-            <div class="hero-art__tag">● MODO AVENTURA ATIVADO</div>
+            <div class="hero-art__tag">
+              <i class="fa-solid fa-circle" aria-hidden="true"></i> MODO AVENTURA ATIVADO
+            </div>
             <svg
               class="hero-art__route"
               viewBox="0 0 360 300"
@@ -107,17 +134,40 @@
             >
               <path
                 d="M30 265 C80 235 52 185 120 176 S190 222 207 155 S170 90 240 82 S275 48 325 25"
-                stroke="#F47721"
+                stroke="var(--color-primary-main)"
                 stroke-width="4"
                 stroke-linecap="round"
                 stroke-dasharray="2 11"
               />
-              <circle cx="30" cy="265" r="8" fill="#F47721" stroke="#17200F" stroke-width="4" />
-              <circle cx="325" cy="25" r="8" fill="#F47721" stroke="#17200F" stroke-width="4" />
-              <circle cx="207" cy="155" r="15" fill="#F47721" fill-opacity=".2" />
-              <circle cx="207" cy="155" r="5" fill="#F47721" />
+              <circle
+                cx="30"
+                cy="265"
+                r="8"
+                fill="var(--color-primary-main)"
+                stroke="var(--color-neutral-600)"
+                stroke-width="4"
+              />
+              <circle
+                cx="325"
+                cy="25"
+                r="8"
+                fill="var(--color-primary-main)"
+                stroke="var(--color-neutral-600)"
+                stroke-width="4"
+              />
+              <circle
+                cx="207"
+                cy="155"
+                r="15"
+                fill="var(--color-primary-main)"
+                fill-opacity=".2"
+              />
+              <circle cx="207" cy="155" r="5" fill="var(--color-primary-main)" />
             </svg>
-            <div class="hero-art__badge"><b>+250 pts</b><span>DESAFIO CONCLUÍDO ✦</span></div>
+            <div class="hero-art__badge">
+              <b>+250 pts</b
+              ><span>DESAFIO CONCLUÍDO <i class="fa-solid fa-star" aria-hidden="true"></i></span>
+            </div>
             <div class="route-card">
               <div><small>ÚLTIMA VIAGEM</small><strong>Serra &amp; liberdade</strong></div>
               <div class="route-card__metric">
@@ -132,10 +182,18 @@
       <div class="ticker">
         <div class="container ticker__inner">
           <div class="ticker__label">A estrada é o começo</div>
-          <div class="ticker__item"><span aria-hidden="true">↗</span> Registre cada viagem</div>
-          <div class="ticker__item"><span aria-hidden="true">✳</span> Complete desafios</div>
-          <div class="ticker__item"><span aria-hidden="true">◆</span> Ganhe pontos</div>
-          <div class="ticker__item"><span aria-hidden="true">♛</span> Suba no ranking</div>
+          <div class="ticker__item">
+            <i class="fa-solid fa-route" aria-hidden="true"></i> Registre cada viagem
+          </div>
+          <div class="ticker__item">
+            <i class="fa-solid fa-bolt" aria-hidden="true"></i> Complete desafios
+          </div>
+          <div class="ticker__item">
+            <i class="fa-solid fa-coins" aria-hidden="true"></i> Ganhe pontos
+          </div>
+          <div class="ticker__item">
+            <i class="fa-solid fa-trophy" aria-hidden="true"></i> Suba no ranking
+          </div>
         </div>
       </div>
 
@@ -152,7 +210,7 @@
           </div>
           <div class="feature-grid">
             <article class="feature">
-              <div class="feature__icon" aria-hidden="true">⌁</div>
+              <div class="feature__icon" aria-hidden="true"><i class="fa-solid fa-route"></i></div>
               <h3>Registre suas viagens</h3>
               <p>
                 Registre seus trajetos de carro ou moto e transforme cada passeio, deslocamento ou
@@ -160,7 +218,9 @@
               </p>
             </article>
             <article class="feature">
-              <div class="feature__icon" aria-hidden="true">✳</div>
+              <div class="feature__icon" aria-hidden="true">
+                <i class="fa-solid fa-bullseye"></i>
+              </div>
               <h3>Vá além do caminho</h3>
               <p>
                 Descubra desafios variados, defina seu próximo objetivo e encontre novas razões para
@@ -168,7 +228,7 @@
               </p>
             </article>
             <article class="feature">
-              <div class="feature__icon" aria-hidden="true">♛</div>
+              <div class="feature__icon" aria-hidden="true"><i class="fa-solid fa-trophy"></i></div>
               <h3>Conquiste seu lugar</h3>
               <p>
                 Acumule pontos ao concluir desafios, acompanhe sua posição e dispute espaço no
@@ -190,8 +250,9 @@
               somar pontos e avançar. A próxima conquista pode começar na sua próxima viagem.
             </p>
             <a href="#comecar" class="btn btn--dark"
-              >Quero encarar desafios <span aria-hidden="true">↗</span></a
-            >
+              >Quero encarar desafios
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i
+            ></a>
           </div>
           <div class="challenge__cards">
             <article class="challenge-card">
@@ -232,17 +293,21 @@
               Os perfis e pontuações ao lado são exemplos ilustrativos do conceito de ranking.
             </p>
             <a href="#comecar" class="btn btn--primary"
-              >Quero entrar no ranking <span aria-hidden="true">↗</span></a
-            >
+              >Quero entrar no ranking
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i
+            ></a>
           </div>
           <div class="leaderboard">
             <div class="leaderboard__head">
-              <strong>Ranking da comunidade</strong><span>● TEMPORADA ATIVA</span>
+              <strong>Ranking da comunidade</strong>
+              <span><i class="fa-solid fa-circle" aria-hidden="true"></i> TEMPORADA ATIVA</span>
             </div>
             <div class="rank-row">
               <div class="rank-row__num">01</div>
               <div class="rider">
-                <div class="rider__avatar" aria-hidden="true">🏍️</div>
+                <div class="rider__avatar" aria-hidden="true">
+                  <i class="fa-solid fa-motorcycle"></i>
+                </div>
                 <div><b>RotaLivre</b><small>12 desafios concluídos</small></div>
               </div>
               <div class="rank-row__score">2.840<small>pontos</small></div>
@@ -250,7 +315,7 @@
             <div class="rank-row">
               <div class="rank-row__num">02</div>
               <div class="rider">
-                <div class="rider__avatar" aria-hidden="true">🛣️</div>
+                <div class="rider__avatar" aria-hidden="true"><i class="fa-solid fa-road"></i></div>
                 <div><b>CurvaCerta</b><small>10 desafios concluídos</small></div>
               </div>
               <div class="rank-row__score">2.560<small>pontos</small></div>
@@ -258,7 +323,7 @@
             <div class="rank-row">
               <div class="rank-row__num">03</div>
               <div class="rider">
-                <div class="rider__avatar" aria-hidden="true">🚗</div>
+                <div class="rider__avatar" aria-hidden="true"><i class="fa-solid fa-car"></i></div>
                 <div><b>KmExtra</b><small>9 desafios concluídos</small></div>
               </div>
               <div class="rank-row__score">2.210<small>pontos</small></div>
@@ -266,7 +331,9 @@
             <div class="rank-row">
               <div class="rank-row__num">04</div>
               <div class="rider">
-                <div class="rider__avatar" aria-hidden="true">🌄</div>
+                <div class="rider__avatar" aria-hidden="true">
+                  <i class="fa-solid fa-mountain-sun"></i>
+                </div>
                 <div><b>VentoNorte</b><small>8 desafios concluídos</small></div>
               </div>
               <div class="rank-row__score">1.980<small>pontos</small></div>
@@ -360,7 +427,8 @@
             <h2>Não deixe sua próxima viagem ser só mais uma.</h2>
             <p>Registre. Desafie-se. Conquiste seu lugar no Rodow.</p>
             <button class="btn btn--primary" type="button" data-toast-trigger>
-              Quero conhecer o Rodow <span aria-hidden="true">↗</span>
+              Quero conhecer o Rodow
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
             </button>
           </div>
         </div>

@@ -5,11 +5,6 @@
   "type": "module",
   "description": "Landing page e Política de Privacidade do Rodow (HTML, CSS e JavaScript puros).",
   "scripts": {
-    "dev": "node scripts/dev-server.js",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
-  },
-  "devDependencies": {
-    "prettier": "^3.3.0"
+    "dev": "node scripts/dev-server.js"
   }
 }

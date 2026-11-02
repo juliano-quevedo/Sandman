@@ -13,12 +13,16 @@ export function initAccordion(selector = '[data-accordion] details') {
     if (!summary || !content) return;
 
     let animation = null;
+    let isOpen = details.open;
 
-    const run = (from, to, onDone) => {
+    const run = (fromHeight, toHeight, fromOpacity, toOpacity, onDone) => {
       animation?.cancel();
       content.style.overflow = 'hidden';
       animation = content.animate(
-        { height: [`${from}px`, `${to}px`], opacity: [from ? 1 : 0, to ? 1 : 0] },
+        {
+          height: [`${fromHeight}px`, `${toHeight}px`],
+          opacity: [fromOpacity, toOpacity],
+        },
         { duration: DURATION_MS, easing: 'ease' },
       );
       animation.onfinish = () => {
@@ -32,16 +36,28 @@ export function initAccordion(selector = '[data-accordion] details') {
     };
 
     summary.addEventListener('click', (event) => {
-      if (reduceMotion.matches) return;
+      if (reduceMotion.matches || typeof content.animate !== 'function') {
+        window.setTimeout(() => {
+          isOpen = details.open;
+        }, 0);
+        return;
+      }
+
       event.preventDefault();
 
-      if (details.open) {
-        run(content.offsetHeight, 0, () => {
+      const fromHeight = content.getBoundingClientRect().height;
+      const fromOpacity = details.open
+        ? Number.parseFloat(getComputedStyle(content).opacity)
+        : 0;
+      isOpen = !isOpen;
+
+      if (!isOpen) {
+        run(fromHeight, 0, fromOpacity, 0, () => {
           details.open = false;
         });
       } else {
         details.open = true;
-        run(0, content.scrollHeight);
+        run(fromHeight, content.scrollHeight, fromOpacity, 1);
       }
     });
   });

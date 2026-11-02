@@ -6,28 +6,48 @@
    ========================================================================== */
 :root {
   /* Cores */
-  --color-bg: #171513;
-  --color-panel: #181e19;
-  --color-panel-policy: #211b17;
-  --color-panel-2: #29221d;
-  --color-text: #f5f7f2;
-  --color-muted: #a8b1a7;
-  --color-muted-policy: #b1b4ad;
-  --color-accent: #f47721;
-  --color-accent-hover: #ff9857;
-  --color-on-accent: #151a12;
-  --color-line: rgba(255, 255, 255, 0.12);
-  --color-hero-fallback: #30251e;
+  --color-primary-dark: #b34a00;
+  --color-primary-main: #ff7818;
+  --color-primary-light: #ffd7ba;
+  --color-danger-dark: #d32f2f;
+  --color-danger-main: #f44336;
+  --color-danger-light: #ffccd2;
+  --color-warning-dark: #ffa000;
+  --color-warning-main: #ffc107;
+  --color-warning-light: #ffecb3;
+  --color-success-dark: #128187;
+  --color-success-main: #1bc5bd;
+  --color-success-light: #abeaee;
+  --color-neutral-600: #2b2b2b;
+  --color-neutral-500: #4e4e4e;
+  --color-neutral-400: #6d6d6d;
+  --color-neutral-300: #b6b6b6;
+  --color-neutral-200: #d9d9d9;
+  --color-neutral-100: #f3f3f3;
+  --color-neutral-white: #ffffff;
+  --color-bg: #f1f3f9;
+  --color-panel: var(--color-neutral-white);
+  --color-panel-policy: var(--color-neutral-white);
+  --color-panel-2: var(--color-neutral-100);
+  --color-text: var(--color-neutral-600);
+  --color-muted: var(--color-neutral-500);
+  --color-muted-policy: var(--color-neutral-500);
+  --color-accent: var(--color-primary-main);
+  --color-accent-text: var(--color-primary-dark);
+  --color-accent-hover: var(--color-primary-dark);
+  --color-on-accent: var(--color-neutral-600);
+  --color-line: #d9d9d9;
+  --color-hero-fallback: var(--color-neutral-600);
 
   /* Seção "Desafios" (fundo claro) */
-  --color-challenge-bg: #ffe4d2;
-  --color-challenge-card: #fff8f3;
-  --color-challenge-border: #f2b58f;
-  --color-challenge-ink: #17200f;
-  --color-challenge-kicker: #a94a12;
-  --color-challenge-body: #6b4936;
-  --color-challenge-mini: #9a6547;
-  --color-challenge-points: #b94f12;
+  --color-challenge-bg: var(--color-primary-light);
+  --color-challenge-card: var(--color-neutral-white);
+  --color-challenge-border: var(--color-neutral-200);
+  --color-challenge-ink: var(--color-neutral-600);
+  --color-challenge-kicker: var(--color-primary-dark);
+  --color-challenge-body: var(--color-neutral-500);
+  --color-challenge-mini: var(--color-neutral-400);
+  --color-challenge-points: var(--color-primary-dark);
 
   /* Tipografia */
   --font-heading: 'Space Grotesk', system-ui, sans-serif;
