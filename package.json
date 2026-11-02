@@ -2,9 +2,10 @@
   "name": "rodow-site",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Landing page e Política de Privacidade do Rodow (HTML, CSS e JavaScript puros).",
   "scripts": {
-    "dev": "npx --yes serve . -l 5500",
+    "dev": "node scripts/dev-server.js",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },

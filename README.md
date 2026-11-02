@@ -27,7 +27,10 @@ Sandman/
 ## Rodar no VS Code
 
 1. Abra a pasta `Sandman` no VS Code e instale as extensões recomendadas.
-2. Clique em **Go Live** (Live Server) ou rode `npm run dev` (http://localhost:5500).
+2. Rode `npm run dev` (http://localhost:5500) ou clique em **Go Live** (Live Server).
+
+O servidor local incluído resolve URLs sem extensão, como `/politica-de-privacidade`, sem
+dependências adicionais.
 
 > Abra por servidor local: os scripts usam ES Modules, que o navegador bloqueia em `file://`.
 
@@ -50,7 +53,7 @@ npm run format:check
 - [ ] E-mail oficial de privacidade (hoje provisório) e dados do responsável (razão social/CNPJ)
 - [ ] Remover a nota final e os avisos "provisório" da política
 - [ ] Revisão jurídica da política (LGPD)
-- [ ] Imagem final do hero (hoje Unsplash) e `og-image.png` (1200×630)
+- [ ] Adicionar a imagem final do hero e criar `og-image.png` (1200×630)
 - [ ] Descomentar `canonical` e `og:image` com o domínio real
 - [ ] Serviços de terceiros reais citados na política
 
