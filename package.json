@@ -3,8 +3,21 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Landing page e Política de Privacidade do Rodow (HTML, CSS e JavaScript puros).",
+  "description": "Landing page do Rodow com Next.js App Router e TypeScript.",
   "scripts": {
-    "dev": "node scripts/dev-server.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "dev:static": "node scripts/dev-server.js"
+  },
+  "dependencies": {
+    "next": "^16.4.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "@types/react": "^19.3.0",
+    "typescript": "^5.9.3"
   }
 }

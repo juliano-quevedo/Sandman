@@ -1,0 +1,374 @@
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import rodowLogo from '../../assets/rodow-logo.png';
+
+export const metadata: Metadata = {
+  title: 'Política de Privacidade — Rodow',
+  description:
+    'Conheça como o Rodow trata seus dados pessoais e informações de localização.',
+  openGraph: {
+    type: 'website',
+    siteName: 'Rodow',
+    locale: 'pt_BR',
+    title: 'Política de Privacidade — Rodow',
+    description:
+      'Conheça como o Rodow trata seus dados pessoais e informações de localização.',
+  },
+};
+
+const sections = [
+  { id: 'dados', label: '1. Informações que coletamos' },
+  { id: 'coleta', label: '2. Como coletamos' },
+  { id: 'uso', label: '3. Como usamos as informações' },
+  { id: 'localizacao', label: '4. Localização e viagens' },
+  { id: 'compartilhamento', label: '5. Como compartilhamos' },
+  { id: 'comunidade', label: '6. Comunidade e privacidade' },
+  { id: 'terceiros', label: '7. Serviços de terceiros' },
+  { id: 'publicacoes', label: '8. Conteúdo público' },
+  { id: 'criancas', label: '9. Crianças e adolescentes' },
+  { id: 'retencao', label: '10. Retenção dos dados' },
+  { id: 'direitos', label: '11. Seus direitos' },
+  { id: 'contato', label: '12. Contato' },
+] as const;
+
+function PolicyHeader() {
+  return (
+    <header className="site-header">
+      <div className="container container--policy site-header__bar">
+        <Link className="logo" href="/" aria-label="Rodow — página inicial">
+          <Image className="logo__image" src={rodowLogo} alt="" width={224} height={30} />
+        </Link>
+        <Link className="back-link" href="/">
+          ← Voltar para o site
+        </Link>
+      </div>
+    </header>
+  );
+}
+
+function PolicyFooter() {
+  return (
+    <footer className="site-footer policy-footer">
+      <div className="container container--policy site-footer__inner">
+        <Link className="logo logo--sm" href="/" aria-label="Rodow — página inicial">
+          <Image className="logo__image" src={rodowLogo} alt="" width={224} height={30} />
+        </Link>
+        <span>© 2026 Rodow · Privacidade e transparência.</span>
+        <a href="mailto:privacidade@rodow.app">Fale com a equipe de privacidade</a>
+      </div>
+    </footer>
+  );
+}
+
+export default function PrivacyPolicyPage() {
+  return (
+    <div className="page-policy">
+      <Link className="skip-link" href="#conteudo">
+        Ir para o conteúdo
+      </Link>
+      <PolicyHeader />
+      <main id="conteudo">
+        <div className="policy-hero">
+          <div className="container container--policy">
+            <div className="eyebrow-text">Transparência e confiança</div>
+            <h1>Política de Privacidade</h1>
+            <p className="policy-hero__intro">
+              Esta Política descreve quais informações o Rodow pode coletar, como elas são
+              utilizadas e em quais situações podem ser compartilhadas quando você registra
+              viagens, acompanha trajetos e participa da comunidade.
+            </p>
+            <p className="policy-hero__meta">
+              Última atualização: 25 de outubro de 2026 · Modelo inspirado na estrutura da política
+              do REVER.
+            </p>
+          </div>
+        </div>
+
+        <div className="container container--policy policy-layout">
+          <aside className="toc">
+            <strong>Nesta política</strong>
+            <nav aria-label="Índice da política">
+              {sections.map(({ id, label }) => (
+                <Link href={`#${id}`} key={id}>
+                  {label}
+                </Link>
+              ))}
+            </nav>
+          </aside>
+
+          <article className="policy-content">
+            <section id="dados">
+              <h2>1. Informações que coletamos</h2>
+              <p>
+                Dependendo de como você utiliza o Rodow, podemos coletar informações que você
+                fornece diretamente, informações geradas pelo uso do aplicativo e dados técnicos do
+                dispositivo. Isso pode incluir:
+              </p>
+              <ul>
+                <li>
+                  <strong>Cadastro e perfil:</strong> nome, e-mail, nome de usuário, foto de perfil e
+                  outros dados fornecidos ao criar ou atualizar sua conta.
+                </li>
+                <li>
+                  <strong>Viagens e veículos:</strong> trajetos, pontos de início e fim, datas,
+                  horários, distâncias, tipo de veículo e informações que você adicionar às
+                  atividades.
+                </li>
+                <li>
+                  <strong>Localização:</strong> dados de geolocalização obtidos pelo GPS durante o
+                  registro de uma viagem, conforme as permissões do dispositivo.
+                </li>
+                <li>
+                  <strong>Atividades na comunidade:</strong> desafios, pontuação, conquistas,
+                  rankings, perfis seguidos e conteúdo que você escolher publicar.
+                </li>
+                <li>
+                  <strong>Dados técnicos e de uso:</strong> endereço IP, tipo de dispositivo,
+                  sistema operacional, versão do aplicativo, identificadores técnicos, registros de
+                  falhas e interações com o serviço.
+                </li>
+                <li>
+                  <strong>Comunicações:</strong> informações fornecidas ao entrar em contato com o
+                  suporte ou participar de recursos de comunicação disponíveis no aplicativo.
+                </li>
+              </ul>
+              <p>
+                As informações efetivamente coletadas dependerão dos recursos disponibilizados e
+                das permissões que você conceder.
+              </p>
+            </section>
+
+            <section id="coleta">
+              <h2>2. Como coletamos as informações</h2>
+              <p>
+                As informações podem ser coletadas quando você cria ou mantém uma conta, preenche
+                seu perfil, registra uma viagem, participa de desafios, publica conteúdo, entra em
+                contato com o suporte ou utiliza outras funcionalidades do Rodow.
+              </p>
+              <p>
+                Alguns dados técnicos também podem ser registrados automaticamente durante o uso do
+                aplicativo, por exemplo para manter o serviço funcionando, entender como os
+                recursos são utilizados, diagnosticar falhas e proteger a segurança das contas.
+              </p>
+              <p>
+                O sistema operacional do seu dispositivo controla as permissões de acesso a recursos
+                como localização. Você pode consultar e alterar essas permissões nas configurações
+                do aparelho.
+              </p>
+            </section>
+
+            <section id="uso">
+              <h2>3. Como usamos as informações</h2>
+              <p>Podemos utilizar as informações coletadas para:</p>
+              <ul>
+                <li>criar e manter sua conta e permitir o acesso ao Rodow;</li>
+                <li>registrar, exibir e calcular informações sobre suas viagens;</li>
+                <li>apresentar desafios, calcular pontos e atualizar rankings;</li>
+                <li>
+                  sugerir desafios ou conteúdos relacionados às atividades e preferências
+                  demonstradas no aplicativo;
+                </li>
+                <li>permitir que você utilize os recursos e configurações disponíveis;</li>
+                <li>
+                  oferecer suporte, responder solicitações e comunicar informações sobre o
+                  serviço;
+                </li>
+                <li>analisar o uso do aplicativo, corrigir problemas e aprimorar recursos;</li>
+                <li>
+                  proteger o Rodow e seus usuários, identificar atividades suspeitas e prevenir
+                  fraude ou manipulação de resultados;
+                </li>
+                <li>cumprir obrigações legais e responder a solicitações válidas de autoridades.</li>
+              </ul>
+            </section>
+
+            <section id="localizacao">
+              <h2>4. Localização e registro de viagens</h2>
+              <div className="note">
+                <strong>Localização durante o uso:</strong> o Rodow precisa acessar a localização
+                do dispositivo enquanto você utiliza o recurso de registro de viagem para
+                acompanhar o trajeto por GPS e calcular dados como distância e percurso.
+              </div>
+              <p>
+                Quando você inicia o registro de uma viagem e concede a permissão solicitada, o
+                Rodow pode coletar informações de localização para registrar o caminho percorrido e
+                associá-lo à atividade. Esses dados também podem ser usados para apoiar
+                funcionalidades relacionadas a desafios, estatísticas e à experiência de condução.
+              </p>
+              <p>
+                A localização coletada pode incluir pontos do trajeto e informações temporais
+                associadas à viagem. Se você salvar ou compartilhar uma atividade, os dados
+                correspondentes poderão permanecer associados a ela conforme as funcionalidades e
+                configurações disponíveis no aplicativo.
+              </p>
+              <p>
+                Você pode alterar ou revogar a permissão de localização nas configurações do
+                dispositivo. Sem essa permissão, o registro de viagens por GPS poderá não funcionar
+                corretamente. Revogar a permissão não exclui automaticamente os trajetos já salvos.
+              </p>
+              <p>
+                Esta descrição considera o acesso à localização durante o uso do recurso de registro
+                de viagem. Caso o Rodow venha a coletar localização quando o aplicativo estiver em
+                segundo plano ou com a tela bloqueada, essa prática deverá ser informada de maneira
+                específica e compatível com a implementação e as permissões solicitadas.
+              </p>
+            </section>
+
+            <section id="compartilhamento">
+              <h2>5. Como compartilhamos as informações</h2>
+              <p>Podemos compartilhar informações nas seguintes situações:</p>
+              <ul>
+                <li>
+                  <strong>Prestadores de serviços:</strong> empresas que fornecem infraestrutura,
+                  hospedagem, mapas, análise técnica, autenticação, atendimento ou outros serviços
+                  necessários à operação do Rodow.
+                </li>
+                <li>
+                  <strong>Comunidade Rodow:</strong> informações de perfil, atividades, trajetos,
+                  conquistas e pontuação que sejam exibidas de acordo com as funcionalidades e
+                  configurações de visibilidade do aplicativo.
+                </li>
+                <li>
+                  <strong>Serviços conectados por você:</strong> quando você optar por conectar uma
+                  conta ou compartilhar uma atividade com outro serviço.
+                </li>
+                <li>
+                  <strong>Requisitos legais e proteção:</strong> quando o compartilhamento for
+                  necessário para cumprir a legislação, atender uma ordem válida, proteger direitos
+                  ou investigar fraude e ameaças à segurança.
+                </li>
+              </ul>
+              <p>
+                Os prestadores de serviço devem utilizar as informações para executar as atividades
+                contratadas. Quando aplicável, o tratamento e eventual transferência internacional
+                de dados deverão observar a legislação pertinente.
+              </p>
+            </section>
+
+            <section id="comunidade">
+              <h2>6. Comunidade e configurações de privacidade</h2>
+              <p>
+                O Rodow pode oferecer recursos para visualizar perfis, acompanhar participantes,
+                comparar pontuações e compartilhar viagens. As informações que você disponibilizar
+                nesses espaços poderão ser vistas por outros usuários e, dependendo do recurso, por
+                pessoas que não possuem conta no aplicativo.
+              </p>
+              <p>
+                Antes de publicar uma atividade, confira quais informações serão exibidas. Dados de
+                trajetos podem revelar locais frequentados, endereços ou rotinas. Quando o Rodow
+                oferecer controles de visibilidade, utilize-os para definir o público das suas
+                informações.
+              </p>
+              <p>
+                As opções de privacidade e a visibilidade padrão devem corresponder ao funcionamento
+                real do aplicativo. Esta página não pressupõe que controles específicos — como
+                perfil privado ou ocultação automática dos pontos de partida e chegada — já estejam
+                disponíveis.
+              </p>
+            </section>
+
+            <section id="terceiros">
+              <h2>7. Aplicativos, sites e integrações de terceiros</h2>
+              <p>
+                O Rodow poderá disponibilizar links, integrações ou opções para compartilhar
+                atividades em serviços de terceiros. Ao utilizar esses recursos, as informações
+                enviadas passam a estar sujeitas também às políticas e configurações do serviço de
+                destino.
+              </p>
+              <p>
+                Serviços de terceiros podem coletar informações diretamente de você conforme seus
+                próprios termos. Recomendamos consultar as políticas desses serviços antes de
+                conectar contas ou compartilhar dados. O Rodow não controla as práticas de
+                privacidade de plataformas externas.
+              </p>
+            </section>
+
+            <section id="publicacoes">
+              <h2>8. Conteúdo público e espaços da comunidade</h2>
+              <p>
+                Se você publicar informações, comentários, fotos ou atividades em áreas públicas ou
+                semipúblicas do Rodow, outras pessoas poderão visualizar, copiar ou compartilhar
+                esse conteúdo. Mesmo que você remova uma publicação ou encerre sua conta, cópias
+                feitas por terceiros podem permanecer disponíveis.
+              </p>
+              <p>
+                Compartilhe apenas as informações que deseja tornar acessíveis a outras pessoas e
+                utilize os mecanismos de denúncia ou suporte disponíveis caso encontre conteúdo ou
+                comportamento inadequado.
+              </p>
+            </section>
+
+            <section id="criancas">
+              <h2>9. Crianças e adolescentes</h2>
+              <p>
+                O Rodow deve informar de forma clara a faixa etária para a qual o aplicativo se
+                destina. O tratamento de dados de crianças e adolescentes, caso permitido, deverá
+                respeitar a legislação aplicável e considerar prioritariamente seus direitos e
+                melhor interesse.
+              </p>
+            </section>
+
+            <section id="retencao">
+              <h2>10. Retenção das informações</h2>
+              <p>
+                As informações poderão ser mantidas pelo período necessário para fornecer os
+                recursos do Rodow, manter registros das atividades solicitadas, atender às
+                finalidades descritas nesta Política, resolver disputas, prevenir fraudes e cumprir
+                obrigações legais. O período de retenção pode variar conforme o tipo de informação
+                e o motivo da coleta.
+              </p>
+              <p>
+                Os prazos e procedimentos efetivos de retenção e exclusão devem ser definidos pelo
+                responsável pelo Rodow e aplicados de acordo com a legislação pertinente.
+              </p>
+            </section>
+
+            <section id="direitos">
+              <h2>11. Seus direitos e escolhas</h2>
+              <p>
+                Você pode revisar as permissões do aplicativo nas configurações do dispositivo e,
+                quando os recursos estiverem disponíveis, atualizar informações do perfil, ajustar
+                a visibilidade de atividades ou solicitar a exclusão da conta e de dados associados.
+              </p>
+              <p>
+                Você também pode exercer os direitos previstos na legislação de proteção de dados
+                aplicável, como solicitar confirmação do tratamento, acesso, correção, informações
+                sobre compartilhamento e eliminação de dados, observadas as hipóteses legais de
+                conservação. Para fazer uma solicitação, utilize o canal de contato informado
+                abaixo.
+              </p>
+            </section>
+
+            <section id="contato">
+              <h2>12. Contato</h2>
+              <p>
+                Para dúvidas ou solicitações relacionadas a esta Política e às informações tratadas
+                pelo Rodow, entre em contato pelo canal oficial de privacidade do aplicativo.
+              </p>
+              <ul>
+                <li>
+                  <strong>E-mail:</strong>{' '}
+                  <a className="inline" href="mailto:privacidade@rodow.app">
+                    privacidade@rodow.app
+                  </a>
+                </li>
+              </ul>
+              <p>O endereço acima é provisório e deverá ser confirmado antes da publicação oficial.</p>
+            </section>
+
+            <div className="note">
+              <strong>Nota:</strong> este protótipo foi reorganizado com base nos temas e na
+              estrutura da Política de Privacidade do REVER, adaptados à proposta do Rodow. Não é
+              uma reprodução literal nem uma confirmação das práticas reais do Rodow. Antes da
+              publicação, confirme os dados do responsável, as funcionalidades existentes, os
+              fornecedores, as configurações de visibilidade e as práticas de localização e
+              retenção.
+            </div>
+          </article>
+        </div>
+      </main>
+      <PolicyFooter />
+    </div>
+  );
+}
