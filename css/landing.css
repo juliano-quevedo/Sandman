@@ -518,10 +518,16 @@
 
 /* ---------- FAQ ---------- */
 .faq {
-  max-width: 800px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  gap: 0 32px;
+  max-width: 1100px;
 }
 
 .faq details {
+  flex: 1 1 calc(50% - 16px);
+  min-width: 0;
   padding: 20px 0;
   border-bottom: 1px solid var(--color-line);
 }
@@ -657,6 +663,10 @@
   .challenge__grid,
   .rank__grid {
     grid-template-columns: 1fr;
+  }
+
+  .faq details {
+    flex-basis: 100%;
   }
 
   .hero {
