@@ -79,8 +79,7 @@ export default function PrivacyPolicyPage() {
               viagens, acompanha trajetos e participa da comunidade.
             </p>
             <p className="policy-hero__meta">
-              Última atualização: 25 de outubro de 2026 · Modelo inspirado na estrutura da política
-              do REVER.
+              Última atualização: 25 de outubro de 2026.
             </p>
           </div>
         </div>
@@ -358,12 +357,10 @@ export default function PrivacyPolicyPage() {
             </section>
 
             <div className="note">
-              <strong>Nota:</strong> este protótipo foi reorganizado com base nos temas e na
-              estrutura da Política de Privacidade do REVER, adaptados à proposta do Rodow. Não é
-              uma reprodução literal nem uma confirmação das práticas reais do Rodow. Antes da
-              publicação, confirme os dados do responsável, as funcionalidades existentes, os
-              fornecedores, as configurações de visibilidade e as práticas de localização e
-              retenção.
+              <strong>Nota:</strong> esta página ainda é um protótipo e não confirma as práticas
+              reais do Rodow. Antes da publicação, confirme os dados do responsável, as
+              funcionalidades existentes, os fornecedores, as configurações de visibilidade e as
+              práticas de localização e retenção.
             </div>
           </article>
         </div>
